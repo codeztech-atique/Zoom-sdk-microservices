@@ -20,7 +20,8 @@ const addUserToDynamoDB = async (userAttributes) => {
 
     // Calculate the TTL (Time to Live)
     // The value must be a Unix timestamp in seconds.
-    const ttlInSeconds = Math.floor(Date.now() / 1000) + (5 * 60); // Current time + 5 minutes
+    const ttlInSeconds = Math.floor(Date.now() / 1000) + (3 * 60); // Current time + 5 minutes
+    
 
     // Prepare the item to be saved in DynamoDB
     const params = {
@@ -29,7 +30,7 @@ const addUserToDynamoDB = async (userAttributes) => {
             userId: userId,
             email: userAttributes.email,
             createdAt: createdAt,
-            ttl: ttlInSeconds,
+            expireAt: ttlInSeconds,
         },
     };
 
