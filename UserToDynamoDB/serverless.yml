@@ -1,0 +1,17 @@
+service: zoom-sdk-auth
+
+plugins:
+  - serverless-dotenv-plugin
+
+provider: 
+    name: aws
+    runtime: nodejs20.x # Node JS version
+    memorySize: 512
+    timeout: 600
+    stage: production
+    role: arn:aws:iam::485947658225:role/zoom-sdk-auth
+    region: ap-south-1 # AWS region
+
+functions:
+ api:
+   handler: handler.UserToDynamodb

@@ -1,0 +1,4 @@
+UserToDynamoDB/node_modules/
+UserToDynamoDB/.serverless/
+UserToDynamoDB/package-lock.json/
+UserToDynamoDB/.env
