@@ -10,7 +10,7 @@ provider:
     timeout: 600
     stage: production
     role: arn:aws:iam::485947658225:role/zoom-sdk-auth
-    region: ap-south-1 # AWS region
+    region: us-east-1 # AWS region
 
 functions:
  api:
