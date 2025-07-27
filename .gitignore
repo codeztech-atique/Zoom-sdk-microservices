@@ -2,3 +2,9 @@ UserToDynamoDB/node_modules/
 UserToDynamoDB/.serverless/
 UserToDynamoDB/package-lock.json/
 UserToDynamoDB/.env
+
+
+Automatically_User_Delete/node_modules/
+Automatically_User_Delete/.serverless/
+Automatically_User_Delete/package-lock.json/
+Automatically_User_Delete/.env
