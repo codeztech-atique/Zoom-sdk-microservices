@@ -66,11 +66,11 @@ module.exports.DeleteUser = async (event) => {
             continue;
         }
         
-        // The userIdentity check ensures the removal was caused by the DynamoDB TTL service
-        if (record.userIdentity?.type !== 'Service' || record.userIdentity?.principalId !== 'dynamodb.amazonaws.com') {
-            console.log("Skipping record not removed by DynamoDB TTL service.");
-            continue;
-        }
+        // // The userIdentity check ensures the removal was caused by the DynamoDB TTL service
+        // if (record.userIdentity?.type !== 'Service' || record.userIdentity?.principalId !== 'dynamodb.amazonaws.com') {
+        //     console.log("Skipping record not removed by DynamoDB TTL service.");
+        //     continue;
+        // }
 
         const oldImage = record.dynamodb?.OldImage;
 
